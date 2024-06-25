@@ -3,15 +3,36 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Navbar from "./components/Navbar";
+import "./styles/Navbar.css";
+import "./styles/styles.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function HelloWorld() {
-  return <h1 className="greeting">Hello, world!</h1>;
+  return (
+    <>
+      <h1>Hello world!!</h1>
+    </>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <HelloWorld />
+    <BrowserRouter>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
