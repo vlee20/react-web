@@ -19,6 +19,10 @@ function HelloWorld() {
   );
 }
 
+function MyButton() {
+  return <button>Button</button>;
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
