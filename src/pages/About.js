@@ -1,7 +1,29 @@
+import image from "../img/R0000005.JPG";
+
+function MyButton() {
+  return <button>Button</button>;
+}
+
+const user = {
+  name: "Vincent Lee",
+  imageUrl: image,
+  imageSize: 180,
+};
+
 export default function About() {
   return (
     <>
       <h1>About</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={"Photo of " + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize,
+        }}
+      />
+      <h2>{user.name}</h2>
       <p>
         I want to express my confidence and desire to overcome challenges. I
         devote a lot of time to solving any situation that arises. As part of
@@ -21,6 +43,7 @@ export default function About() {
         I did not have any knowledge before being given this task, but I was
         able to achieve in making it work promptly.
       </p>
+      <MyButton />
     </>
   );
 }
