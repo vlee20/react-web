@@ -43,7 +43,6 @@ export default function About() {
         I did not have any knowledge before being given this task, but I was
         able to achieve in making it work promptly.
       </p>
-      <MyButton />
     </>
   );
 }
