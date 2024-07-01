@@ -1,0 +1,10 @@
+.pgbreak {
+    opacity:0.8;
+    background-color:#ccc;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:100vh;
+    top:0px;
+    left:0px;
+}
