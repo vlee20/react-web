@@ -1,15 +1,32 @@
 .pgbreak {
   opacity: 0.8;
-  background-color: #ccc;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
   top: 0px;
   left: 0px;
+  justify-content: center;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: auto;
 }
 
 .container2 {
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .container1 {
+    grid-template-columns: auto;
+  }
+}
+
+.App {
+  margin-left: 10%;
+  margin-right: 10%;
 }
