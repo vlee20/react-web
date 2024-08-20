@@ -1,7 +1,7 @@
 // motion and useAnimation Hooks from Framer Motion;
 // useEffect Hook from React;
 // useInView Hook from 'react-intersection-observer'
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useScroll} from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 
@@ -114,15 +114,16 @@ const ImageCont = ({ image, desc }) => {
       <img
         src={image}
         alt={desc}
-        style={{
-          maxWidth: 700,
-        }}
+        className="singleImg"
       />
     </motion.div>
   );
 };
 export default function Contact() {
   const control = useAnimation();
+  const { scrollYProgress } = useScroll({
+    offset: ["start start", "end end"],
+  });
   const [ref, inView] = useInView();
   useEffect(() => {
     if (inView) {
@@ -133,11 +134,13 @@ export default function Contact() {
   return (
     <>
       <div className="App">
-        <div className="pgbreak">
+        <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
+        {/* <div className="pgbreak">
+
           <h2>Welcome to my Portfolio Page</h2>
           <h3>This is an archive of the recent trips I've visited.</h3>
           <h3>I like to travel if you can't tell!</h3>
-        </div>
+        </div> */}
         <div className="container1">
           <ImageCont image={mammoth_mountain} desc={"Picture from Mammoth"} />
           <div>

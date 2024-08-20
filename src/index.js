@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import Navbar from "./components/Navbar";
 import "./styles/Navbar.css";
 import "./styles/styles.css";
+import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -26,18 +27,24 @@ function MyButton() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-        </Routes>
-      </div>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <BrowserRouter>
+  //     <Navbar />
+  //     <div className="container">
+  //       <Routes>
+  //         <Route path="/" element={<Home />}></Route>
+  //         <Route path="/about" element={<About />}></Route>
+  //         <Route path="/contact" element={<Contact />}></Route>
+  //       </Routes>
+  //     </div>
+  //   </BrowserRouter>
+  // </React.StrictMode>
+  <React.Fragment>
+    <Navbar />
+    <Intro />
+    <About />
+    <Contact />
+  </React.Fragment>
 );
 
 // If you want to start measuring performance in your app, pass a function

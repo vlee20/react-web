@@ -30,3 +30,22 @@
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.progress-bar {
+    position: fixed;
+    top: 46px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #c480ee;
+    transform-origin: 0%;
+  }
+  
+  .singleImg {
+    overflow: hidden;
+    width: 700px;
+    transition: scale 400ms;
+  }
+  .singleImg:hover {
+    scale: 105%;
+  }
