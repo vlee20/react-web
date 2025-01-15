@@ -1,9 +1,5 @@
 import image from "../img/R0000005.JPG";
 
-function MyButton() {
-  return <button>Button</button>;
-}
-
 const user = {
   name: "Vincent Lee",
   imageUrl: image,
@@ -25,23 +21,34 @@ export default function About() {
       />
       <h2>{user.name}</h2>
       <p>
-        I want to express my confidence and desire to overcome challenges. I
-        devote a lot of time to solving any situation that arises. As part of
-        the IT department as a software engineer, I work alongside my colleagues
-        to solve bugs that occur either within the database or the portal pages.
-        Even if the code was too foreign to comprehend at first glance, I
-        dedicated the time to asking questions and suggesting solutions that
-        might assist in debugging the matter. I have solved numerous issues,
-        including hardware, code bugs, and WMS issues.
+        I am a data-driven developer with a strong foundation in Python and
+        extensive experience working on integration projects and data
+        manipulation. Using tools like Pandas, I’ve successfully transformed and
+        automated workflows, ensuring efficiency and reliability in complex
+        systems.
       </p>
       <p>
-        Taking a lead role in a project from scratch and dealing with live
-        orders for thousands of customers. It was a partnership with another
-        company to allow data flow into our warehouse management system (WMS). I
-        developed an API that needed to communicate between the two systems and
-        had to set up both the testing and production environments from scratch.
-        I did not have any knowledge before being given this task, but I was
-        able to achieve in making it work promptly.
+        I’m highly adaptable and quick to learn new technologies, as
+        demonstrated when I set up testing and production environments from
+        scratch on Google Cloud Platform for an API integration project with
+        Overstock. While I had no prior experience with networking, I quickly
+        familiarized myself with DNS configuration and SSL implementation to
+        deliver a fully functional API.
+      </p>
+      <p>
+        Having led integration and automation projects, I understand the nuances
+        of managing data flow, API development, and seamless system migrations.
+        My full-stack development experience—ranging from front-end technologies
+        like Bootstrap, JavaScript, and jQuery to back-end connections with
+        MSSQL and TSQL—positions me well to work on both customer-facing user
+        interfaces and backend integrations.
+      </p>
+      <p>
+        I thrive in fast-paced environments and bring an ambitious, self-driven
+        attitude to my work. In previous roles, I’ve taken the initiative to
+        solve challenging problems, automate processes, and streamline
+        workflows. I’m drawn to the start-up culture because I enjoy
+        contributing meaningfully to a team’s growth and success.
       </p>
     </>
   );
