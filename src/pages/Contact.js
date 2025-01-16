@@ -1,36 +1,4 @@
-// motion and useAnimation Hooks from Framer Motion;
-// useEffect Hook from React;
-// useInView Hook from 'react-intersection-observer'
-import { motion, useAnimation, useScroll } from "framer-motion";
-
-import { useInView } from "react-intersection-observer";
-
-import { useEffect } from "react";
-
-import {
-  Animator,
-  ScrollContainer,
-  ScrollPage,
-  Sticky,
-  batch,
-  Fade,
-  Move,
-  MoveIn,
-  MoveOut,
-  FadeOut,
-  FadeIn,
-  ZoomIn,
-  StickyIn,
-} from "react-scroll-motion";
-
 import "../styles/Contact.css";
-
-import mammoth_mountain from "../img/R0000843.JPG";
-import lake_tahoe_lake from "../img/R0000886.JPG";
-import sakura_jp from "../img/R0000961.JPG";
-import hakone_shrine_jp from "../img/R0001306.JPG";
-import fatty_tuna_jp from "../img/R0000918.JPG";
-import under_freeway_jp from "../img/R0000930.JPG";
 
 export default function Contact() {
   return (

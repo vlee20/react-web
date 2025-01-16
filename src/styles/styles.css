@@ -7,7 +7,6 @@
   border-radius: 50%;
 }
 
-
 .pgbreak {
   opacity: 0.8;
   display: flex;
@@ -17,4 +16,22 @@
   top: 0px;
   left: 0px;
   justify-content: center;
+}
+
+.center-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.center-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
 }

@@ -10,19 +10,6 @@ import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-function HelloWorld() {
-  return (
-    <>
-      <h1>Hello world!!</h1>
-    </>
-  );
-}
-
-function MyButton() {
-  return <button>Button</button>;
-}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
