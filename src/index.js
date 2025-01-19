@@ -10,6 +10,7 @@ import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
