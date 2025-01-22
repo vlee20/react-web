@@ -11,6 +11,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Skills from "./pages/Skills";
+import Footer from "./pages/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -31,7 +33,9 @@ root.render(
     <Navbar />
     <Intro />
     <About />
+    <Skills />
     <Contact />
+    <Footer />
   </React.Fragment>
 );
 

@@ -1,4 +1,4 @@
-import image from "../img/R0000005.JPG";
+import image from "../img/CANTI.jpg";
 import "../styles/About.css";
 import "../styles/styles.css";
 
