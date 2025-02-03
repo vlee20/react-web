@@ -1,14 +1,23 @@
-@media {
-  .navbar-expand-lg .navbar-collapse {
-    display: flex;
+/* @media {
+  .navbar-collapse {
+    display: flex !important;
     float: none;
-    justify-content: center;
+    flex-direction: row;
   }
+} */
+
+.navbar-set {
+  display: flex;
+  flex-direction: row !important;
+  list-style: none;
 }
 
-.navbar .navbar-collapse {
-  text-align: center;
+ul {
+  margin-top: 16px !important;
 }
+/* .navbar .navbar-collapse {
+  text-align: center;
+} */
 
 .navbar-light {
   background-color: #dce1e9 !important;
@@ -22,6 +31,14 @@
 
 .nav-link:hover {
   /* border-bottom: 2px solid rgb(144, 123, 219); */
+  /* content: " ";
+  height: 2px;
+  width: 100%;
+  background-color: #d4afb9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0; */
 }
 
 .nav-link::after {
@@ -37,4 +54,8 @@
 
 .nav-link:hover::after {
   opacity: 1;
+}
+
+.nitem {
+  padding: 5px;
 }

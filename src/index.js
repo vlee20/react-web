@@ -17,18 +17,6 @@ import Footer from "./pages/Footer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  // <React.StrictMode>
-  //   <BrowserRouter>
-  //     <Navbar />
-  //     <div className="container">
-  //       <Routes>
-  //         <Route path="/" element={<Home />}></Route>
-  //         <Route path="/about" element={<About />}></Route>
-  //         <Route path="/contact" element={<Contact />}></Route>
-  //       </Routes>
-  //     </div>
-  //   </BrowserRouter>
-  // </React.StrictMode>
   <React.Fragment>
     <Navbar />
     <Intro />
