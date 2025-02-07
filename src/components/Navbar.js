@@ -9,11 +9,13 @@ function transitionNav() {
   }
 }
 
+var savedScrollPos = 0;
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
-
+  console.log(savedScrollPos, currentScrollPos);
   // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
-  if (currentScrollPos > 7000) {
+  savedScrollPos = Math.min(savedScrollPos, currentScrollPos);
+  if (currentScrollPos > 0) {
     // I am using 'display' instead of 'top':
     document.getElementById("nav").style.display = "none";
   } else {
@@ -26,24 +28,24 @@ export default function Navbar() {
     <>
       <nav id="nav">
         <div>
-          <ul class="navbar-set center-vertical">
-            <li class="nitem active">
-              <a class="nav-link" href="#Intro">
-                Home <span class="sr-only"></span>
+          <ul className="navbar-set center-vertical">
+            <li className="nitem active">
+              <a className="nav-link" href="#Intro">
+                Home <span className="sr-only"></span>
               </a>
             </li>
-            <li class="nitem">
-              <a class="nav-link" href="#About">
+            <li className="nitem">
+              <a className="nav-link" href="#About">
                 About
               </a>
             </li>
-            <li class="nitem">
-              <a class="nav-link" href="#Skills">
+            <li className="nitem">
+              <a className="nav-link" href="#Skills">
                 Skills
               </a>
             </li>
-            <li class="nitem">
-              <a class="nav-link" href="#Contact">
+            <li className="nitem">
+              <a className="nav-link" href="#Contact">
                 Contact
               </a>
             </li>

@@ -11,9 +11,9 @@ const user = {
 export default function About() {
   return (
     <>
-      <body
+      <div
         id="About"
-        className="center-vertical"
+        className="center-vertical page"
         style={{ backgroundColor: "#A1D2F4" }}
       >
         <h1 className="center text-center border2">About</h1>
@@ -64,7 +64,7 @@ export default function About() {
             </p>
           </div>
         </div>
-      </body>
+      </div>
     </>
   );
 }

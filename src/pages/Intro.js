@@ -2,12 +2,12 @@ import "../styles/styles.css";
 
 export default function Intro() {
   return (
-    <body
+    <div
       id="Intro"
-      className="center-horizontal"
+      className="center-horizontal page"
       style={{ backgroundColor: "#BFDAEF" }}
     >
       <h2>Welcome</h2>
-    </body>
+    </div>
   );
 }

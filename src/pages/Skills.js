@@ -1,9 +1,11 @@
+import "../styles/styles.css";
+
 export default function Skills() {
   return (
     <>
-      <body id="Skills" className="center-vertical">
+      <div id="Skills" className="center-vertical page">
         SKILLS
-      </body>
+      </div>
     </>
   );
 }

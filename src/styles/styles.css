@@ -2,7 +2,7 @@
   border-radius: 50%;
 }
 
-body {
+.page {
   display: flex;
   flex-direction: column;
   height: 100vh;
