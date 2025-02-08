@@ -1,32 +1,26 @@
 import "../styles/Navbar.css";
 import "../styles/styles.css";
 
-function transitionNav() {
-  if (window.scrollY == 0) {
-    //user scrolled to the top of the page
-    document.getElementsByClassName("navbar-light").style.backgroundColor =
-      "transparent";
-  }
-}
 
 var savedScrollPos = 0;
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
-  console.log(savedScrollPos, currentScrollPos);
-  // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
-  savedScrollPos = Math.min(savedScrollPos, currentScrollPos);
-  if (currentScrollPos > 0) {
-    // I am using 'display' instead of 'top':
-    document.getElementById("nav").style.display = "none";
+  var diff = currentScrollPos - savedScrollPos
+  if (diff > 0) {
+    // detects scrolling down
+    document.getElementById("nav").style.opacity = 0;
+    document.getElementById("nav").classList.remove("fade-in")
   } else {
-    document.getElementById("nav").style.display = "initial";
+    document.getElementById("nav").style.opacity = 1;
+    document.getElementById("nav").classList.add("fade-in")
   }
+  savedScrollPos = currentScrollPos
 };
 
 export default function Navbar() {
   return (
     <>
-      <nav id="nav">
+      <nav id="nav" className="fade-in">
         <div>
           <ul className="navbar-set center-vertical">
             <li className="nitem active">
