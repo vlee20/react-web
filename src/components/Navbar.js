@@ -8,11 +8,12 @@ window.onscroll = function () {
   var diff = currentScrollPos - savedScrollPos
   if (diff > 0) {
     // detects scrolling down
-    document.getElementById("nav").style.opacity = 0;
     document.getElementById("nav").classList.remove("fade-in")
+    document.getElementById("nav").classList.add("fade-out")
   } else {
-    document.getElementById("nav").style.opacity = 1;
+    document.getElementById("nav").classList.remove("fade-out")
     document.getElementById("nav").classList.add("fade-in")
+    
   }
   savedScrollPos = currentScrollPos
 };
