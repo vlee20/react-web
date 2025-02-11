@@ -14,7 +14,7 @@ export default function About() {
       <div
         id="About"
         className="center-vertical page"
-        style={{ backgroundColor: "#A1D2F4" }}
+        style={{}}
       >
         <h1 className="center text-center border2">About</h1>
         <div className="abt border1">

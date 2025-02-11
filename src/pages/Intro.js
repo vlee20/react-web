@@ -5,7 +5,7 @@ export default function Intro() {
     <div
       id="Intro"
       className="center-horizontal page"
-      style={{ backgroundColor: "#BFDAEF" }}
+      style={{}}
     >
       <h2>Welcome</h2>
     </div>
