@@ -17,7 +17,7 @@ export default function About() {
         style={{}}
       >
         <h1 className="center text-center border2">About</h1>
-        <div className="abt border1">
+        <div id="AbtCont" className="abt border1">
           <div className="center-vertical text-center">
             <img
               className="avatar"

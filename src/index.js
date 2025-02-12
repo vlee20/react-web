@@ -40,6 +40,11 @@ window.onscroll = function () {
     element2.classList.add("animate");
     element3.classList.add("animate");
   }
+
+  if (currentScrollPos > 120) {
+    const abt = document.getElementById("About");
+    abt.classList.add("fade1");
+  }
 };
 
 
