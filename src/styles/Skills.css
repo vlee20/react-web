@@ -50,10 +50,10 @@
 
 .skillperc {
     height: 14px;
-    background: red;
+    background: teal;
     border-radius: 3px;
     position: relative;
-    animation: fillBars 2.5s 1;
+    /* animation: fillBars 2.5s 1; */
 }
 
 .skillperc::before {
@@ -78,6 +78,10 @@
     right: 0;
     transform: translateX(50%) rotate(45deg);
     border-radius: 2px;;
+}
+
+.animate {
+    animation: fillBars 2s 1;
 }
 
 @keyframes fillBars {

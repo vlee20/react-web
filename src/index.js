@@ -16,6 +16,42 @@ import Footer from "./pages/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+var savedScrollPos = 0;
+window.onscroll = function () {
+  var currentScrollPos = window.scrollY;
+  var diff = currentScrollPos - savedScrollPos
+  if (diff > 0) {
+    // detects scrolling down
+    document.getElementById("nav").classList.remove("fade-in")
+    document.getElementById("nav").classList.add("fade-out")
+  } else {
+    document.getElementById("nav").classList.remove("fade-out")
+    document.getElementById("nav").classList.add("fade-in")
+    
+  }
+  savedScrollPos = currentScrollPos
+
+  if (currentScrollPos > 1100) {
+    const element1 = document.getElementById("skill1");
+    const element2 = document.getElementById("skill2");
+    const element3 = document.getElementById("skill3");
+
+    element1.classList.add("animate");
+    element2.classList.add("animate");
+    element3.classList.add("animate");
+  }
+};
+
+
+
+window.onload = function() {
+  var currentScrollPos = window.scrollY;
+  if (currentScrollPos == 0) {
+    const element4 = document.getElementById("IntroCont");
+    element4.classList.add("fade1");
+  }
+};
+
 root.render(
   <React.Fragment>
     <Navbar />

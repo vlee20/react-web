@@ -7,7 +7,7 @@ export default function Intro() {
       className="center-horizontal page"
       style={{}}
     >
-      <h2>Welcome</h2>
+      <h2 id="IntroCont">Welcome</h2>
     </div>
   );
 }
