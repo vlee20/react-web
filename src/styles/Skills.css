@@ -16,14 +16,14 @@
 .scrolling-wrapper-flexbox {
     display: flex;
     width: 120vh;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     overflow: auto;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar {
         display: none;
       }
-    .card {
+    .card1 {
       flex: 0 0 auto;
     }
   }

@@ -41,53 +41,51 @@ export default function Skills() {
       </div>
       <h1 className="center text-center border2">Projects</h1>
       <div className="scrolling-wrapper-flexbox">
-        <div id="cntr1" className="border2 mborder1 card">
+        <a href="https://github.com/vlee20/route_finder-master" target="_blank" rel="noopener noreferrer">
+        <div id="cntr1" className="border2 mborder1 card1">
           <div>
             <div>
-              <h4>TITLE</h4>
+              <h4>RouteFinder</h4>
               <hr></hr>
-              <div className="desc">The API project had spontaneous deadlines where some changes must be done in two weeks. It was a collaborative effort where my role was to send information from and back to the partnering company. My co-worker used that information to process the orders and create the labels for each sales order. I then send out a ship confirmation for each order that has been processed. My lead communicated the requirements for us and what changes needed to be done. This was done successfully in a timely manner in preparation for the testing process.</div>
+              <div className="desc">An iOS application for those who cannot decide where to run. Demonstrated software design models and diagrams.</div>
             </div>            
           </div>
         </div>
-        <div id="cntr1" className="border2 mborder1 card">
+        </a>
+        <a href="https://github.com/CSUF-CPSC411-2021F/group-project-team-hypervisor" target="_blank" rel="noopener noreferrer">
+        <div id="cntr1" className="border2 mborder1 card1">
           <div>
             <div>
-              <h4>TITLE</h4>
+              <h4>MealPickr</h4>
               <hr></hr>
-              <div className="desc">The API project had spontaneous deadlines where some changes must be done in two weeks. It was a collaborative effort where my role was to send information from and back to the partnering company. My co-worker used that information to process the orders and create the labels for each sales order. I then send out a ship confirmation for each order that has been processed. My lead communicated the requirements for us and what changes needed to be done. This was done successfully in a timely manner in preparation for the testing process.</div>
+              <div className="desc">It's always hard choosing a place to eat around the area. There are times where it takes over 30 minutes just thinking of what to eat. For those indecisive folks, it would be nice to have a generator to select random restaurants to eat. It can also help give ideas by having the application choose random restaurants for you. I feel like it is universal because everyone has to eat. Time is important so don’t waste time thinking when you should be eating.</div>
             </div>            
           </div>
         </div>
-        <div id="cntr1" className="border2 mborder1 card">
+        </a>
+        <a href="https://github.com/vlee20/snake_game" target="_blank" rel="noopener noreferrer">
+        <div id="cntr1" className="border2 mborder1 card1">
           <div>
             <div>
-              <h4>TITLE</h4>
+              <h4>Snake</h4>
               <hr></hr>
-              <div className="desc">The API project had spontaneous deadlines where some changes must be done in two weeks. It was a collaborative effort where my role was to send information from and back to the partnering company. My co-worker used that information to process the orders and create the labels for each sales order. I then send out a ship confirmation for each order that has been processed. My lead communicated the requirements for us and what changes needed to be done. This was done successfully in a timely manner in preparation for the testing process.</div>
+              <div className="desc">A snake game from scratch for my video game design class.</div>
             </div>            
           </div>
         </div>
-        <div id="cntr1" className="border2 mborder1 card">
+        </a>
+        <a href="https://github.com/vlee20/pig_game" target="_blank" rel="noopener noreferrer">
+        <div id="cntr1" className="border2 mborder1 card1">
           <div>
             <div>
-              <h4>TITLE</h4>
+              <h4>Pig Game</h4>
               <hr></hr>
-              <div className="desc">The API project had spontaneous deadlines where some changes must be done in two weeks. It was a collaborative effort where my role was to send information from and back to the partnering company. My co-worker used that information to process the orders and create the labels for each sales order. I then send out a ship confirmation for each order that has been processed. My lead communicated the requirements for us and what changes needed to be done. This was done successfully in a timely manner in preparation for the testing process.</div>
+              <div className="desc">A game executed through the console and to demonstrate good practice of OOP.</div>
             </div>            
           </div>
         </div>
-        <div id="cntr1" className="border2 mborder1 card">
-          <div>
-            <div>
-              <h4>TITLE</h4>
-              <hr></hr>
-              <div className="desc">The API project had spontaneous deadlines where some changes must be done in two weeks. It was a collaborative effort where my role was to send information from and back to the partnering company. My co-worker used that information to process the orders and create the labels for each sales order. I then send out a ship confirmation for each order that has been processed. My lead communicated the requirements for us and what changes needed to be done. This was done successfully in a timely manner in preparation for the testing process.</div>
-            </div>            
-          </div>
-        </div>
+        </a>
       </div>
-
       </div>
     </>
   );

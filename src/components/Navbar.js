@@ -21,7 +21,7 @@ import "../styles/styles.css";
 export default function Navbar() {
   return (
     <>
-      <nav id="nav" className="fade-in">
+      <nav id="nav">
         <div>
           <ul className="navbar-set center-vertical">
             <li className="nitem active">

@@ -5,7 +5,8 @@
 .page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 50rem;
+  margin: 25px;
 }
 
 .pgbreak {
@@ -64,5 +65,72 @@
   }
   to{
     opacity: 1;
+  }
+}
+
+.slide1 {
+  animation: slidekey1 1s;
+}
+
+.slide2 {
+  animation: slidekey2 1s;
+}
+
+@keyframes slidekey1 {
+  from {
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+@keyframes slidekey2 {
+  from {
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-100%);
+  }
+}
+
+a:visited, a:link, a:active
+{
+    color: unset;
+    text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.055);
+}
+
+body {
+  font-size: 16px; /* sets base font size */
+}
+
+h1 {
+  font-size: 2em; /* relative to parent element, this sets h1 to 32px*/
+}
+
+p {
+  font-size: 1rem; /* relative to base font size, this sets to 16px */
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  img {
+    width: 170px;
+    height: 170px;
   }
 }

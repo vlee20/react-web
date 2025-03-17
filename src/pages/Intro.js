@@ -1,4 +1,7 @@
 import "../styles/styles.css";
+import Typewriter from "../components/Typewriter.js";
+// import "../styles/Starfield.css";
+import { color } from "framer-motion";
 
 export default function Intro() {
   return (
@@ -7,7 +10,9 @@ export default function Intro() {
       className="center-horizontal page"
       style={{}}
     >
-      <h2 id="IntroCont">Welcome</h2>
+      <div id="IntroCont">
+        <h2 style={{}}><Typewriter text = "Welcome" delay={200}/></h2>
+      </div>
     </div>
   );
 }

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import "./styles/Navbar.css";
 import "./styles/styles.css";
+import StarsBgAnimation from "./components/Background";
 import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,6 +15,7 @@ import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from "./pages/Skills";
 import Footer from "./pages/Footer";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -22,11 +25,16 @@ window.onscroll = function () {
   var diff = currentScrollPos - savedScrollPos
   if (diff > 0) {
     // detects scrolling down
-    document.getElementById("nav").classList.remove("fade-in")
-    document.getElementById("nav").classList.add("fade-out")
+    // document.getElementById("nav").classList.remove("fade-in")
+    // document.getElementById("nav").classList.add("fade-out")
+    document.getElementById("nav").classList.remove("slide2");
+    document.getElementById("nav").classList.add("slide1");
   } else {
-    document.getElementById("nav").classList.remove("fade-out")
-    document.getElementById("nav").classList.add("fade-in")
+    // detects scrolling up 
+    // document.getElementById("nav").classList.remove("fade-out")
+    // document.getElementById("nav").classList.add("fade-in")
+    document.getElementById("nav").classList.remove("slide1");
+    document.getElementById("nav").classList.add("slide2");
     
   }
   savedScrollPos = currentScrollPos
@@ -41,10 +49,10 @@ window.onscroll = function () {
     element3.classList.add("animate");
   }
 
-  if (currentScrollPos > 120) {
-    const abt = document.getElementById("About");
-    abt.classList.add("fade1");
-  }
+  // if (currentScrollPos > 120) {
+  //   const abt = document.getElementById("About");
+  //   abt.classList.add("fade1");
+  // }
 };
 
 
@@ -57,14 +65,19 @@ window.onload = function() {
   }
 };
 
+
 root.render(
   <React.Fragment>
-    <Navbar />
-    <Intro />
-    <About />
-    <Skills />
-    <Contact />
-    <Footer />
+    <body className="starsbg">
+      <StarsBgAnimation />
+      <Header />
+      <Navbar />
+      <Intro />
+      <About />
+      <Skills />
+      <Contact />
+      <Footer />
+    </body>
   </React.Fragment>
 );
 
