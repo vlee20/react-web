@@ -12,8 +12,11 @@ const user = {
 export default function About() {
   return (
     <>
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: {duration:5} }}>
-        <div id="About" className="center-vertical page" style={{}}>
+      <div id="About" className="center-vertical page" style={{}}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 3 } }}
+        >
           <h1 className="center text-center border2">About</h1>
           <div id="AbtCont" className="abt border1">
             <div className="center-vertical text-center">
@@ -37,14 +40,6 @@ export default function About() {
                 reliability in complex systems.
               </p>
               <p>
-                I’m highly adaptable and quick to learn new technologies, as
-                demonstrated when I set up testing and production environments
-                from scratch on Google Cloud Platform for an API integration
-                project with Overstock. While I had no prior experience with
-                networking, I quickly familiarized myself with DNS configuration
-                and SSL implementation to deliver a fully functional API.
-              </p>
-              <p>
                 Having led integration and automation projects, I understand the
                 nuances of managing data flow, API development, and seamless
                 system migrations. My full-stack development experience—ranging
@@ -53,18 +48,10 @@ export default function About() {
                 well to work on both customer-facing user interfaces and backend
                 integrations.
               </p>
-              <p>
-                I thrive in fast-paced environments and bring an ambitious,
-                self-driven attitude to my work. In previous roles, I’ve taken
-                the initiative to solve challenging problems, automate
-                processes, and streamline workflows. I’m drawn to the start-up
-                culture because I enjoy contributing meaningfully to a team’s
-                growth and success.
-              </p>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </>
   );
 }

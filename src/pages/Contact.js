@@ -6,6 +6,9 @@ export default function Contact() {
     <>
       <div id="Contact" className="center-vertical page">
         <h1 className="center">Contact Me</h1>
+        <div>
+          Leave your details and I'll get back to you as soon as possible.
+        </div>
         <br></br>
         <form className="center">
           <div className="input-group mb-3">
@@ -39,7 +42,11 @@ export default function Contact() {
             ></input>
           </div>
           <div className="input-group mb-3">
-            <textarea type="text" className="form-control"></textarea>
+            <textarea
+              type="text"
+              className="form-control"
+              placeholder="Message"
+            ></textarea>
           </div>
           <button className="btn btn-primary input-group mb-3" type="submit">
             Send

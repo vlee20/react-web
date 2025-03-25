@@ -15,30 +15,32 @@ import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from "./pages/Skills";
 import Footer from "./pages/Footer";
-
+import Projects from "./pages/Projects";
+import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12/+esm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+// nav bar animation
 var savedScrollPos = 0;
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
-  var diff = currentScrollPos - savedScrollPos
+  var diff = currentScrollPos - savedScrollPos;
   if (diff > 0) {
     // detects scrolling down
-    // document.getElementById("nav").classList.remove("fade-in")
-    // document.getElementById("nav").classList.add("fade-out")
-    document.getElementById("nav").classList.remove("slide2");
-    document.getElementById("nav").classList.add("slide1");
+    document.getElementById("nav").classList.remove("fade-in");
+    document.getElementById("nav").classList.add("fade-out");
+    // document.getElementById("nav").classList.remove("slide2");
+    // document.getElementById("nav").classList.add("slide1");
   } else {
-    // detects scrolling up 
-    // document.getElementById("nav").classList.remove("fade-out")
-    // document.getElementById("nav").classList.add("fade-in")
-    document.getElementById("nav").classList.remove("slide1");
-    document.getElementById("nav").classList.add("slide2");
-    
+    // detects scrolling up
+    document.getElementById("nav").classList.remove("fade-out");
+    document.getElementById("nav").classList.add("fade-in");
+    // document.getElementById("nav").classList.remove("slide1");
+    // document.getElementById("nav").classList.add("slide2");
   }
-  savedScrollPos = currentScrollPos
+  savedScrollPos = currentScrollPos;
 
+  // skills animation
   if (currentScrollPos > 1100) {
     const element1 = document.getElementById("skill1");
     const element2 = document.getElementById("skill2");
@@ -55,16 +57,13 @@ window.onscroll = function () {
   // }
 };
 
-
-
-window.onload = function() {
-  var currentScrollPos = window.scrollY;
-  if (currentScrollPos == 0) {
-    const element4 = document.getElementById("IntroCont");
-    element4.classList.add("fade1");
-  }
-};
-
+// window.onload = function() {
+//   var currentScrollPos = window.scrollY;
+//   if (currentScrollPos == 0) {
+//     const element4 = document.getElementById("IntroCont");
+//     element4.classList.add("fade1");
+//   }
+// };
 
 root.render(
   <React.Fragment>
@@ -75,6 +74,7 @@ root.render(
       <Intro />
       <About />
       <Skills />
+      <Projects />
       <Contact />
       <Footer />
     </body>

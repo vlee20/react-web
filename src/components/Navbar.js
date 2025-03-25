@@ -1,21 +1,19 @@
 import "../styles/Navbar.css";
 import "../styles/styles.css";
 
-
 // var savedScrollPos = 0;
 // window.onscroll = function () {
 //   var currentScrollPos = window.scrollY;
-//   var diff = currentScrollPos - savedScrollPos
+//   var diff = currentScrollPos - savedScrollPos;
 //   if (diff > 0) {
 //     // detects scrolling down
-//     document.getElementById("nav").classList.remove("fade-in")
-//     document.getElementById("nav").classList.add("fade-out")
+//     document.getElementById("nav").classList.remove("fade-in");
+//     document.getElementById("nav").classList.add("fade-out");
 //   } else {
-//     document.getElementById("nav").classList.remove("fade-out")
-//     document.getElementById("nav").classList.add("fade-in")
-    
+//     document.getElementById("nav").classList.remove("fade-out");
+//     document.getElementById("nav").classList.add("fade-in");
 //   }
-//   savedScrollPos = currentScrollPos
+//   savedScrollPos = currentScrollPos;
 // };
 
 export default function Navbar() {
@@ -37,6 +35,11 @@ export default function Navbar() {
             <li className="nitem">
               <a className="nav-link" href="#Skills">
                 Skills
+              </a>
+            </li>
+            <li className="nitem">
+              <a className="nav-link" href="#Projects">
+                Projects
               </a>
             </li>
             <li className="nitem">
