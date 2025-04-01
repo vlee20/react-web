@@ -1,4 +1,46 @@
-.abt {
+#AbtCont {
   display: grid;
   grid-template-columns: 50% 50%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 625px) {
+  .avatar {
+    width: 225px;
+    height: 225px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .avatar {
+    width: 155px;
+    height: 155px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  #AbtCont {
+    grid-template-columns: none;
+  }
+  
+}
+
+@media screen and (max-width: 525px) {
+  p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  p {
+    font-size: 12px;
+  }
+  
 }

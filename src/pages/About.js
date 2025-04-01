@@ -12,22 +12,23 @@ const user = {
 export default function About() {
   return (
     <>
-      <div id="About" className="center-vertical page" style={{}}>
+      <div
+        id="About"
+        className="center-vertical page container-fluid"
+        style={{}}
+      >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, transition: { duration: 3 } }}
+          viewport={{ once: true }}
         >
           <h1 className="center text-center border2">About</h1>
-          <div id="AbtCont" className="abt border1">
+          <div id="AbtCont" className="abt border1 container-fluid">
             <div className="center-vertical text-center">
               <img
-                className="avatar"
+                className="avatar img-fluid"
                 src={user.imageUrl}
                 alt={"Photo of " + user.name}
-                style={{
-                  width: user.imageSize,
-                  height: user.imageSize,
-                }}
               />
               <h2>{user.name}</h2>
             </div>

@@ -32,6 +32,10 @@
   flex-direction: column;
 }
 
+.center-vertical p {
+  padding: 20px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -105,6 +109,7 @@ a:hover {
 
 body {
   font-size: 16px; /* sets base font size */
+  color: white;
 }
 
 h1 {
