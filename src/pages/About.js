@@ -1,4 +1,4 @@
-import image from "../img/CANTI.jpg";
+import image from "../img/pp.JPG";
 import "../styles/About.css";
 import "../styles/styles.css";
 import { motion } from "motion/react";
@@ -26,7 +26,7 @@ export default function About() {
           <div id="AbtCont" className="abt border1 container-fluid">
             <div className="center-vertical text-center">
               <img
-                className="avatar img-fluid"
+                className="avatar"
                 src={user.imageUrl}
                 alt={"Photo of " + user.name}
               />

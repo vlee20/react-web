@@ -6,11 +6,33 @@ export default function Contact() {
     <>
       <div id="Contact" className="center-vertical page">
         <h1 className="center">Contact Me</h1>
-        <div>
-          Leave your details and I'll get back to you as soon as possible.
+        <br></br>
+        <div class="container">
+          <div class="contact-info" style={{ textAlign: "center" }}>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:vlee20@protonmail.com">vlee20@protonmail.com</a>
+            </p>
+            <p>
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+1234567890">+1 (626) 757-7482</a>
+            </p>
+            <p>
+              <strong>LinkedIn:</strong>{" "}
+              <a href="https://www.linkedin.com/in/vlee20" target="_blank">
+                linkedin.com/in/vlee20
+              </a>
+            </p>
+            <p>
+              <strong>GitHub:</strong>{" "}
+              <a href="https://github.com/vlee20" target="_blank">
+                github.com/vlee20
+              </a>
+            </p>
+          </div>
         </div>
         <br></br>
-        <form className="center">
+        {/* <form className="center">
           <div className="input-group mb-3">
             <span className="input-group-text">First and last name</span>
             <input
@@ -51,7 +73,7 @@ export default function Contact() {
           <button className="btn btn-primary input-group mb-3" type="submit">
             Send
           </button>
-        </form>
+        </form> */}
       </div>
     </>
   );

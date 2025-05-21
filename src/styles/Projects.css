@@ -1,0 +1,56 @@
+.img {
+    aspect-ratio: 1/1;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.project-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-right: 20px;
+}
+.project-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.project-desc {
+    width: 450px;
+}
+.project-link {
+    font-size: 1.5rem;
+    color: blue;
+    text-decoration: underline;
+}
+.project-link:hover {
+    text-decoration: none;
+}
+.project-link:visited {
+    color: purple;
+}
+.project-link:active {
+    color: red;
+}
+.project-link:focus {
+    outline: 2px solid blue;
+}
+.project-link:focus-visible {
+    outline: 2px solid blue;
+}
+.project-link:focus-within {
+    outline: 2px solid blue;
+}

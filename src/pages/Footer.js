@@ -23,7 +23,7 @@ export default function Footer() {
           <i className="bi bi-github fs-3"></i>
         </a>
       </div>
-      <p className="center-horizontal">Created by Vincent Lee © 2025</p>
+      <div className="center-horizontal">Created by Vincent Lee © 2025</div>
     </footer>
   );
 }
