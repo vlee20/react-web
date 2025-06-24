@@ -97,11 +97,11 @@
   }
 }
 
-a:visited, a:link, a:active
+/* a:visited, a:link, a:active
 {
     color: unset;
     text-decoration: none;
-}
+} */
 
 a:hover {
   transform: scale(1.055);

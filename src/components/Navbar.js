@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav id="nav">
         <div>
           <ul className="navbar-set center-vertical">
-            <li className="nitem active">
+            <li className="nitem">
               <a className="nav-link" href="#Intro">
                 Home <span className="sr-only"></span>
               </a>

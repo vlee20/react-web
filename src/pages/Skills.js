@@ -12,99 +12,45 @@ import nginx_icon from "../img/nginx-svgrepo-com.svg";
 import cpp_icon from "../img/c-plus-plus-svgrepo-com.svg";
 import { motion } from "motion/react";
 
+const skills = [
+  { icon: python_icon, name: "Python" },
+  { icon: mysql_icon, name: "SQL" },
+  { icon: mongodb_icon, name: "MongoDB" },
+  { icon: javascript_icon, name: "JavaScript" },
+  { icon: html_icon, name: "HTML" },
+  { icon: css_icon, name: "CSS" },
+  { icon: gcp_icon, name: "GCP" },
+  { icon: django_icon, name: "Django" },
+  { icon: nginx_icon, name: "Nginx" },
+  { icon: cpp_icon, name: "C++" },
+];
+
 export default function Skills() {
   return (
-    <>
-      <div id="Skills" className="center-vertical page">
-        <h1 className="center text-center border2">Skills</h1>
-
-        <div className="skill-icons">
+    <div id="Skills" className="skills-section">
+      <h1 className="skills-title">Skills</h1>
+      <div className="skills-grid">
+        {skills.map((skill, idx) => (
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 1 } }}
+            className="skill-card"
+            key={skill.name}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, delay: idx * 0.1 },
+            }}
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+            }}
             viewport={{ once: true }}
           >
-            <div className="skill-icons-row">
-              <div className="icon">
-                <img
-                  src={python_icon}
-                  class="pg-icon img-fluid"
-                  alt="python"
-                ></img>
-                <div>Python</div>
-              </div>
-              <div className="icon">
-                <img src={mysql_icon} class="pg-icon img-fluid" alt="sql"></img>
-                <div>SQL</div>
-              </div>
-              <div className="icon">
-                <img
-                  src={mongodb_icon}
-                  class="pg-icon img-fluid"
-                  alt="mongodb"
-                ></img>
-                <div>MongoDB</div>
-              </div>
-            </div>
+            <img src={skill.icon} alt={skill.name} className="skill-icon" />
+            <div className="skill-label">{skill.name}</div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 2 } }}
-            viewport={{ once: true }}
-          >
-            <div className="skill-icons-row">
-              <div className="icon">
-                <img
-                  src={javascript_icon}
-                  class="pg-icon img-fluid"
-                  alt="javascript"
-                ></img>
-                <div>JavaScript</div>
-              </div>
-              <div className="icon">
-                <img src={html_icon} class="pg-icon img-fluid" alt="html"></img>
-                <div>HTML</div>
-              </div>
-              <div className="icon">
-                <img src={gcp_icon} class="pg-icon img-fluid" alt="gcp"></img>
-                <div>GCP</div>
-              </div>
-              <div className="icon">
-                <img
-                  src={django_icon}
-                  class="pg-icon img-fluid"
-                  alt="django"
-                ></img>
-                <div>Django</div>
-              </div>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 3 } }}
-            viewport={{ once: true }}
-          >
-            <div className="skill-icons-row">
-              <div className="icon">
-                <img src={css_icon} class="pg-icon img-fluid" alt="css"></img>
-                <div>CSS</div>
-              </div>
-              <div className="icon">
-                <img
-                  src={nginx_icon}
-                  class="pg-icon img-fluid"
-                  alt="nginx"
-                ></img>
-                <div>Nginx</div>
-              </div>
-              <div className="icon">
-                <img src={cpp_icon} class="pg-icon img-fluid" alt="c++"></img>
-                <div>C++</div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }

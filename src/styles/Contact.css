@@ -38,3 +38,88 @@
 .singleImg:hover {
   scale: 105%;
 }
+
+.contact-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: inherit;
+  padding: 60px 0;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 4px 32px rgba(34,34,59,0.10);
+  padding: 48px 36px 36px 36px;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.contact-info {
+  font-size: 1.08rem;
+  color: #4a4e69;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+}
+
+.contact-info a {
+  color: #4f8cff;
+  text-decoration: none;
+  transition: color 0.18s;
+  word-break: break-all;
+}
+
+.contact-info a:hover {
+  color: #22223b;
+  text-decoration: underline;
+}
+
+/* Optional: Style for the contact form if you enable it
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin-top: 18px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dce1e9;
+  font-size: 1rem;
+  resize: none;
+}
+.contact-form button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.contact-form button:hover {
+  background: #22223b;
+}
+*/

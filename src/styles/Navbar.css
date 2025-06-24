@@ -7,11 +7,13 @@
 } */
 
 #nav {
-  transition: opacity 0.5s ease-in-out;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(34,34,59,0.07);
+  transition: background 0.3s, box-shadow 0.3s, opacity 0.4s;
   position: sticky;
   top: 0;
   overflow: hidden;
-  background-color: black;
+  opacity: 1;
 }
 
 .navbar-set {
@@ -21,13 +23,15 @@
 }
 
 .fade-in {
-	opacity: 1;
+	opacity: 1 !important;
+  pointer-events: auto;
   /* visibility: visible;
   transition: opacity 1s linear; */
 }
 
 .fade-out {
-	opacity: 0;
+	opacity: 0 !important;
+  pointer-events: none;
   /* visibility: hidden;
   transition: visibility 0s 1s, opacity 1s linear; */
 }
@@ -74,6 +78,23 @@ ul {
 
 .nav-link:hover::after {
   opacity: 1;
+}
+
+.navbar-set .nav-link,
+.navbar-set .nitem {
+  color: #222 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-set .nav-link:hover,
+.navbar-set .nitem:hover {
+  color: #4f8cff !important; /* Optional: blue on hover */
+  text-decoration: none;
+}
+
+.nitem.active .nav-link {
+  color: #4f8cff !important; /* Optional: highlight active */
 }
 
 .nitem {

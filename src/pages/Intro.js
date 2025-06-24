@@ -1,21 +1,27 @@
-import "../styles/styles.css";
-import Typewriter from "../components/Typewriter.js";
+import "../styles/Intro.css";
 import { motion } from "motion/react";
+import Typewriter from "../components/Typewriter.js";
 
 export default function Intro() {
   return (
-    <div id="Intro" className="center-horizontal page" style={{}}>
+    <section id="Intro" className="intro-section page-background">
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 2 } }}
+        className="intro-card"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
         viewport={{ once: true }}
       >
-        <div id="IntroCont">
-          <h2 style={{}}>
-            <Typewriter text="Welcome" delay={200} />
-          </h2>
-        </div>
+        <h1 className="intro-title">
+          <Typewriter text="Welcome" delay={120} />
+        </h1>
+        <p className="intro-subtitle">
+          I’m Vincent Lee, a data-driven developer passionate about building
+          impactful solutions.
+        </p>
+        <a href="#Projects" className="intro-cta">
+          View My Work
+        </a>
       </motion.div>
-    </div>
+    </section>
   );
 }

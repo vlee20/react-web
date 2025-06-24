@@ -40,8 +40,8 @@ window.onscroll = function () {
 
 root.render(
   <React.Fragment>
-    <body className="starsbg">
-      <StarsBgAnimation />
+    <body className="page-background">
+      {/* <StarsBgAnimation /> */}
       <Header />
       <Navbar />
       <Intro />

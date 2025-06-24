@@ -1,0 +1,48 @@
+/* Add to styles.css or a new Intro.css */
+.intro-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: inherit; /* uses .page-background */
+}
+.intro-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 4px 32px rgba(34,34,59,0.10);
+  padding: 48px 36px 36px 36px;
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.intro-subtitle {
+  font-size: 1.2rem;
+  color: #4a4e69;
+  margin-bottom: 32px;
+  max-width: 420px;
+  text-align: center;
+}
+.intro-cta {
+  display: inline-block;
+  background: #4f8cff;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.18s, transform 0.18s;
+}
+.intro-cta:hover {
+  background: #22223b;
+  transform: translateY(-2px) scale(1.04);
+}
