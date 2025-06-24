@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-web/static/css/main.76f5230b.css",
-    "main.js": "/react-web/static/js/main.ceeedb54.js",
+    "main.css": "/react-web/static/css/main.17344747.css",
+    "main.js": "/react-web/static/js/main.8cf5a415.js",
     "static/js/453.ed3810f9.chunk.js": "/react-web/static/js/453.ed3810f9.chunk.js",
     "static/media/pp.JPG": "/react-web/static/media/pp.f459b269f8680185e0b7.JPG",
     "static/media/mealpickr.png": "/react-web/static/media/mealpickr.7072ac437ec201120c48.png",
@@ -20,12 +20,12 @@
     "static/media/django-svgrepo-com.svg": "/react-web/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/react-web/index.html",
     "static/media/css-3-svgrepo-com.svg": "/react-web/static/media/css-3-svgrepo-com.315b8fdb9dbf75ae965b80bf368895cd.svg",
-    "main.76f5230b.css.map": "/react-web/static/css/main.76f5230b.css.map",
-    "main.ceeedb54.js.map": "/react-web/static/js/main.ceeedb54.js.map",
+    "main.17344747.css.map": "/react-web/static/css/main.17344747.css.map",
+    "main.8cf5a415.js.map": "/react-web/static/js/main.8cf5a415.js.map",
     "453.ed3810f9.chunk.js.map": "/react-web/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76f5230b.css",
-    "static/js/main.ceeedb54.js"
+    "static/css/main.17344747.css",
+    "static/js/main.8cf5a415.js"
   ]
 }
