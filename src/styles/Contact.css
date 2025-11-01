@@ -123,3 +123,24 @@
   background: #22223b;
 }
 */
+
+/* Dark theme overrides */
+[data-theme="dark"] .contact-section {
+  background: #0b1020;
+}
+[data-theme="dark"] .contact-card {
+  background: #12172b;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+}
+[data-theme="dark"] .contact-title {
+  color: #e9ecff;
+}
+[data-theme="dark"] .contact-info {
+  color: #b5bdd6;
+}
+[data-theme="dark"] .contact-info a {
+  color: #8ab4ff;
+}
+[data-theme="dark"] .contact-info a:hover {
+  color: #cde0ff;
+}

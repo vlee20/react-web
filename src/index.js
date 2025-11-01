@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import "./styles/Navbar.css";
 import "./styles/styles.css";
-import StarsBgAnimation from "./components/Background";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -14,6 +13,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from "./pages/Skills";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
+
+// Force dark theme globally
+try {
+  document.documentElement.setAttribute("data-theme", "dark");
+} catch {}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -41,7 +45,6 @@ window.onscroll = function () {
 root.render(
   <React.Fragment>
     <body className="page-background">
-      {/* <StarsBgAnimation /> */}
       <Header />
       <Navbar />
       <Intro />

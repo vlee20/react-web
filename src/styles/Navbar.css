@@ -100,3 +100,21 @@ ul {
 .nitem {
   padding: 5px;
 }
+
+/* Always-dark theme overrides */
+[data-theme="dark"] #nav {
+  background: #0f1222;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+[data-theme="dark"] .navbar-set .nav-link,
+[data-theme="dark"] .navbar-set .nitem {
+  color: #e6e9f7 !important;
+}
+[data-theme="dark"] .navbar-set .nav-link:hover,
+[data-theme="dark"] .navbar-set .nitem:hover,
+[data-theme="dark"] .nitem.active .nav-link {
+  color: #8ab4ff !important;
+}
+[data-theme="dark"] .nav-link::after {
+  background-color: #3b82f6;
+}

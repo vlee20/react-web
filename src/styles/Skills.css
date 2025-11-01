@@ -185,3 +185,21 @@
 .skill-card:hover {
   background: #e9ecef;
 }
+
+/* Dark theme overrides */
+[data-theme="dark"] .skills-section {
+  background: #0b1020;
+}
+[data-theme="dark"] .skills-title {
+  color: #e9ecff;
+}
+[data-theme="dark"] .skill-card {
+  background: #12172b;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.45);
+}
+[data-theme="dark"] .skill-card:hover {
+  background: #1b223a;
+}
+[data-theme="dark"] .skill-label {
+  color: #e9ecff;
+}

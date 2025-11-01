@@ -90,3 +90,21 @@
 .about-description p {
   margin-bottom: 14px;
 }
+
+/* Dark theme overrides */
+[data-theme="dark"] .about-section {
+  background: #0b1020;
+}
+[data-theme="dark"] .about-card {
+  background: #12172b;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+}
+[data-theme="dark"] .about-avatar {
+  border-color: #3b82f6;
+}
+[data-theme="dark"] .about-name {
+  color: #e9ecff;
+}
+[data-theme="dark"] .about-description {
+  color: #b5bdd6;
+}

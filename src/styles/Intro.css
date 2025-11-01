@@ -46,3 +46,21 @@
   background: #22223b;
   transform: translateY(-2px) scale(1.04);
 }
+
+/* Dark theme overrides */
+[data-theme="dark"] .intro-card {
+  background: #12172b;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+}
+[data-theme="dark"] .intro-title {
+  color: #e9ecff;
+}
+[data-theme="dark"] .intro-subtitle {
+  color: #b5bdd6;
+}
+[data-theme="dark"] .intro-cta {
+  background: #3b82f6;
+}
+[data-theme="dark"] .intro-cta:hover {
+  background: #1f2a44;
+}
