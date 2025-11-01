@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-web/static/css/main.17344747.css",
-    "main.js": "/react-web/static/js/main.8cf5a415.js",
+    "main.css": "/react-web/static/css/main.81d327da.css",
+    "main.js": "/react-web/static/js/main.74d30f97.js",
     "static/js/453.ed3810f9.chunk.js": "/react-web/static/js/453.ed3810f9.chunk.js",
     "static/media/pp.JPG": "/react-web/static/media/pp.f459b269f8680185e0b7.JPG",
     "static/media/mealpickr.png": "/react-web/static/media/mealpickr.7072ac437ec201120c48.png",
@@ -9,6 +9,7 @@
     "static/media/bootstrap-icons.woff?": "/react-web/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/react-web/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "static/media/snake.png": "/react-web/static/media/snake.64a1993d83e10e4f5885.png",
+    "static/media/finance-dashboard.png": "/react-web/static/media/finance-dashboard.0b43cccce0f1f1ec853e.png",
     "static/media/mysql-logo-svgrepo-com.svg": "/react-web/static/media/mysql-logo-svgrepo-com.5dbd7ffb56a921cecde426cca82f0df4.svg",
     "static/media/html-5-svgrepo-com.svg": "/react-web/static/media/html-5-svgrepo-com.eba3e919a9c1f2e4582f908e79d6f213.svg",
     "static/media/javascript-svgrepo-com.svg": "/react-web/static/media/javascript-svgrepo-com.0866c81b3b841c647e23b8a5d991c312.svg",
@@ -20,12 +21,12 @@
     "static/media/django-svgrepo-com.svg": "/react-web/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/react-web/index.html",
     "static/media/css-3-svgrepo-com.svg": "/react-web/static/media/css-3-svgrepo-com.315b8fdb9dbf75ae965b80bf368895cd.svg",
-    "main.17344747.css.map": "/react-web/static/css/main.17344747.css.map",
-    "main.8cf5a415.js.map": "/react-web/static/js/main.8cf5a415.js.map",
+    "main.81d327da.css.map": "/react-web/static/css/main.81d327da.css.map",
+    "main.74d30f97.js.map": "/react-web/static/js/main.74d30f97.js.map",
     "453.ed3810f9.chunk.js.map": "/react-web/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.17344747.css",
-    "static/js/main.8cf5a415.js"
+    "static/css/main.81d327da.css",
+    "static/js/main.74d30f97.js"
   ]
 }
