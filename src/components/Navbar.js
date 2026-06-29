@@ -21,7 +21,14 @@ export default function Navbar() {
   const [activeId, setActiveId] = useState("Intro");
 
   useEffect(() => {
-    const sectionIds = ["Intro", "About", "Skills", "Projects", "Contact"];
+    const sectionIds = [
+      "Intro",
+      "About",
+      "Experience",
+      "Skills",
+      "Projects",
+      "Contact",
+    ];
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -65,6 +72,15 @@ export default function Navbar() {
                 aria-current={activeId === "About" ? "page" : undefined}
               >
                 About
+              </a>
+            </li>
+            <li className={`nitem ${activeId === "Experience" ? "active" : ""}`}>
+              <a
+                className="nav-link"
+                href="#Experience"
+                aria-current={activeId === "Experience" ? "page" : undefined}
+              >
+                Experience
               </a>
             </li>
             <li className={`nitem ${activeId === "Skills" ? "active" : ""}`}>

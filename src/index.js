@@ -8,6 +8,7 @@ import "./styles/Navbar.css";
 import "./styles/styles.css";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
+import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from "./pages/Skills";
@@ -49,6 +50,7 @@ root.render(
       <Navbar />
       <Intro />
       <About />
+      <Experience />
       <Skills />
       <Projects />
       <Contact />
