@@ -1,6 +1,6 @@
 .experience-section {
-  padding: 80px 24px 90px;
-  background: #0b1020;
+  padding: 72px 24px;
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,16 +8,16 @@
 
 .experience-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 8px;
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  margin-bottom: 12px;
   font-weight: 700;
-  color: #e9ecff;
-  letter-spacing: 2px;
+  color: var(--heading);
+  letter-spacing: -0.5px;
 }
 
 .experience-subtitle {
   text-align: center;
-  color: #8a93b2;
+  color: var(--muted);
   font-size: 1.05rem;
   margin-bottom: 56px;
 }
@@ -39,9 +39,9 @@
   width: 2px;
   background: linear-gradient(
     180deg,
-    #3b82f6 0%,
-    #2a3354 60%,
-    rgba(42, 51, 84, 0)
+    var(--accent) 0%,
+    var(--border-strong) 65%,
+    transparent
   );
 }
 
@@ -71,47 +71,47 @@
   height: 16px;
   margin-top: 6px;
   border-radius: 50%;
-  background: #12172b;
-  border: 3px solid #3b82f6;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+  background: #fff;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-ring);
 }
 
 .timeline-item.is-current .timeline-dot {
-  background: #3b82f6;
-  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.22);
+  background: var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-ring);
   animation: timeline-pulse 2.4s ease-in-out infinite;
 }
 
 .timeline-item.is-education .timeline-dot {
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.14);
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.16);
 }
 
 @keyframes timeline-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.22);
+    box-shadow: 0 0 0 5px var(--accent-ring);
   }
   50% {
-    box-shadow: 0 0 0 9px rgba(59, 130, 246, 0.05);
+    box-shadow: 0 0 0 9px rgba(79, 70, 229, 0.05);
   }
 }
 
 /* Card */
 .timeline-card {
   flex: 1;
-  background: #12172b;
-  border: 1px solid #1d2540;
-  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 22px 24px;
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .timeline-card:hover {
   transform: translateY(-3px);
-  border-color: #2f3c63;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
 }
 
 .timeline-card-header {
@@ -124,38 +124,39 @@
 
 .timeline-role {
   margin: 0 0 4px;
-  font-size: 1.2rem;
-  color: #e9ecff;
-  font-weight: 600;
+  font-size: 1.18rem;
+  color: var(--heading);
+  font-weight: 700;
 }
 
 .timeline-company {
   margin: 0;
   font-size: 0.95rem;
-  color: #9fb0ff;
-  font-weight: 500;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .timeline-location {
-  color: #6f7aa0;
+  color: var(--muted);
   font-weight: 400;
 }
 
 .timeline-period {
   flex: 0 0 auto;
   font-size: 0.8rem;
-  color: #b5bdd6;
-  background: #1a2240;
-  border: 1px solid #243257;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
   padding: 5px 12px;
   border-radius: 999px;
   white-space: nowrap;
 }
 
 .timeline-period.current {
-  color: #d6e2ff;
-  background: rgba(59, 130, 246, 0.16);
-  border-color: rgba(59, 130, 246, 0.45);
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent-ring);
+  font-weight: 600;
 }
 
 .timeline-points {
@@ -166,9 +167,9 @@
 
 .timeline-points li {
   position: relative;
-  color: #b5bdd6;
+  color: var(--text);
   font-size: 0.95rem;
-  line-height: 1.55;
+  line-height: 1.6;
   margin-bottom: 10px;
   padding-left: 6px;
 }
@@ -181,7 +182,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #3b82f6;
+  background: var(--accent);
 }
 
 .timeline-tags {
@@ -194,27 +195,22 @@
 .timeline-tag {
   font-size: 0.75rem;
   line-height: 1;
-  background: #1e293b;
-  color: #cdd6f4;
+  background: var(--accent-soft);
+  color: var(--accent-hover);
   padding: 6px 11px;
   border-radius: 999px;
-  border: 1px solid #243247;
+  border: 1px solid var(--border);
 }
-
-/* Avoid global a:hover scale affecting nothing here; tags/links scoped */
 
 @media screen and (max-width: 600px) {
   .experience-section {
-    padding: 60px 16px 70px;
-  }
-  .experience-title {
-    font-size: 2rem;
+    padding: 64px 16px;
   }
   .timeline-item {
     gap: 16px;
   }
   .timeline-card {
-    padding: 18px 18px;
+    padding: 18px;
   }
   .timeline-card-header {
     flex-direction: column;

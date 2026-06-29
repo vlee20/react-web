@@ -1,4 +1,5 @@
 import "../styles/styles.css";
+import "../styles/Footer.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function Footer() {

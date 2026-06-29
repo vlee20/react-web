@@ -26,6 +26,7 @@ export default function About() {
           height={user.imageSize}
         />
         <h2 className="about-name">{user.name}</h2>
+        <p className="about-role">Software Engineer</p>
         <div className="about-description">
           <p>
             I am a data-driven developer with a strong foundation in Python and

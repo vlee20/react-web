@@ -1,74 +1,103 @@
 import "../styles/Intro.css";
-import { motion, AnimatePresence } from "motion/react";
-import Typewriter from "../components/Typewriter.js";
-import { useEffect, useState } from "react";
-// Slideshow images (all starting with 'R')
-import R0000886 from "../img/R0000886.JPG";
-import R0000930 from "../img/R0000930.JPG";
-import R0000961 from "../img/R0000961.JPG";
-import R0001052 from "../img/R0001052.JPG";
-import R0001097 from "../img/R0001097.JPG";
-import R0001118 from "../img/R0001118.JPG";
-import R0001224 from "../img/R0001224.JPG";
-import R0001263 from "../img/R0001263.JPG";
-import R0001274 from "../img/R0001274.JPG";
-import R0001306 from "../img/R0001306.JPG";
+import { motion } from "motion/react";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import avatar from "../img/pp.JPG";
+
+const chips = [
+  { label: "Python", className: "chip-1" },
+  { label: "React", className: "chip-2" },
+  { label: "GCP", className: "chip-3" },
+  { label: "Django", className: "chip-4" },
+];
 
 export default function Intro() {
-  const images = [
-    R0000886,
-    R0000930,
-    R0000961,
-    R0001052,
-    R0001097,
-    R0001118,
-    R0001224,
-    R0001263,
-    R0001274,
-    R0001306,
-  ];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setIndex((i) => (i + 1) % images.length);
-    }, 7000); // 3 seconds
-    return () => clearInterval(id);
-  }, [images.length]);
-
   return (
-    <section id="Intro" className="intro-section page-background">
-      <div className="intro-bg">
-        <AnimatePresence initial={false} mode="wait">
-          <motion.div
-            key={index}
-            className="intro-bg-layer"
-            style={{ backgroundImage: `url(${images[index]})` }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 7 }}
-            aria-hidden="true"
-          />
-        </AnimatePresence>
+    <section id="Intro" className="hero">
+      <div className="hero-bg" aria-hidden="true">
+        <span className="hero-blob hero-blob-a" />
+        <span className="hero-blob hero-blob-b" />
+        <span className="hero-grid" />
       </div>
-      <motion.div
-        className="intro-card"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
-        viewport={{ once: true }}
-      >
-        <h1 className="intro-title">
-          <Typewriter text="Welcome" delay={120} />
-        </h1>
-        <p className="intro-subtitle">
-          I’m Vincent Lee, a data-driven developer passionate about building
-          impactful solutions.
-        </p>
-        <a href="#Projects" className="intro-cta">
-          View My Work
-        </a>
-      </motion.div>
+
+      <div className="hero-inner">
+        {/* Left: intro + bio */}
+        <motion.div
+          className="hero-copy"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
+          viewport={{ once: true }}
+        >
+          <span className="hero-badge">
+            <span className="hero-badge-dot" /> Available for new opportunities
+          </span>
+          <h1 className="hero-title">
+            Hi, I&rsquo;m <span className="hero-name">Vincent Lee</span>
+          </h1>
+          <p className="hero-role">Software Engineer</p>
+          <p className="hero-bio">
+            I&rsquo;m a data-driven developer who builds cloud-integrated APIs,
+            ETL pipelines, and automation tooling that ship to production. From
+            Django REST services on GCP to interactive dashboards, I turn messy
+            data and manual workflows into reliable, efficient systems.
+          </p>
+          <div className="hero-actions">
+            <a href="#Projects" className="btn btn-primary">
+              View My Work
+            </a>
+            <a href="#Contact" className="btn btn-ghost">
+              Get in Touch
+            </a>
+          </div>
+          <div className="hero-social">
+            <a
+              href="https://www.linkedin.com/in/vlee20"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i className="bi bi-linkedin" />
+            </a>
+            <a
+              href="https://github.com/vlee20"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i className="bi bi-github" />
+            </a>
+            <a href="#Contact" aria-label="Email">
+              <i className="bi bi-envelope-fill" />
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Right: portrait + floating chips */}
+        <motion.div
+          className="hero-visual"
+          initial={{ opacity: 0, scale: 0.92 }}
+          whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
+          viewport={{ once: true }}
+        >
+          <div className="hero-portrait">
+            <span className="hero-ring" aria-hidden="true" />
+            <img src={avatar} alt="Vincent Lee" className="hero-avatar" />
+            {chips.map((chip, i) => (
+              <motion.span
+                key={chip.label}
+                className={`hero-chip ${chip.className}`}
+                animate={{ y: [0, -9, 0] }}
+                transition={{
+                  duration: 3.5 + i * 0.4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                {chip.label}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

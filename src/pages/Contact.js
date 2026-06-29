@@ -12,6 +12,9 @@ export default function Contact() {
         viewport={{ once: true }}
       >
         <h1 className="contact-title">Contact Me</h1>
+        <p className="contact-lead">
+          Let&rsquo;s connect &mdash; I&rsquo;m always open to new opportunities.
+        </p>
         <div className="contact-info">
           <p>
             <strong>Email:</strong>{" "}

@@ -23,7 +23,6 @@ export default function Navbar() {
   useEffect(() => {
     const sectionIds = [
       "Intro",
-      "About",
       "Experience",
       "Skills",
       "Projects",
@@ -63,15 +62,6 @@ export default function Navbar() {
                 aria-current={activeId === "Intro" ? "page" : undefined}
               >
                 Home <span className="sr-only"></span>
-              </a>
-            </li>
-            <li className={`nitem ${activeId === "About" ? "active" : ""}`}>
-              <a
-                className="nav-link"
-                href="#About"
-                aria-current={activeId === "About" ? "page" : undefined}
-              >
-                About
               </a>
             </li>
             <li className={`nitem ${activeId === "Experience" ? "active" : ""}`}>
