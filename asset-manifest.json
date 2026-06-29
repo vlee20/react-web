@@ -1,18 +1,8 @@
 {
   "files": {
-    "main.css": "/react-web/static/css/main.bc4dbc44.css",
-    "main.js": "/react-web/static/js/main.1c167be4.js",
+    "main.css": "/react-web/static/css/main.ee51fc05.css",
+    "main.js": "/react-web/static/js/main.048eb358.js",
     "static/js/453.ed3810f9.chunk.js": "/react-web/static/js/453.ed3810f9.chunk.js",
-    "static/media/R0001097.JPG": "/react-web/static/media/R0001097.c735d9871161f287c9b0.JPG",
-    "static/media/R0000961.JPG": "/react-web/static/media/R0000961.4a6f599091ab53540d0d.JPG",
-    "static/media/R0001306.JPG": "/react-web/static/media/R0001306.239b46576b7879d75777.JPG",
-    "static/media/R0001118.JPG": "/react-web/static/media/R0001118.6979b847212bd5d910a6.JPG",
-    "static/media/R0001224.JPG": "/react-web/static/media/R0001224.f39d98eca029f4232c82.JPG",
-    "static/media/R0001274.JPG": "/react-web/static/media/R0001274.2919d016a14994258c15.JPG",
-    "static/media/R0000886.JPG": "/react-web/static/media/R0000886.83c6a37bc3fba1bb838e.JPG",
-    "static/media/R0001263.JPG": "/react-web/static/media/R0001263.b28df6e87d38c25ca387.JPG",
-    "static/media/R0001052.JPG": "/react-web/static/media/R0001052.c7d696a7734a86308efd.JPG",
-    "static/media/R0000930.JPG": "/react-web/static/media/R0000930.9e3f919916781cd09084.JPG",
     "static/media/pp.JPG": "/react-web/static/media/pp.f459b269f8680185e0b7.JPG",
     "static/media/mealpickr.png": "/react-web/static/media/mealpickr.7072ac437ec201120c48.png",
     "static/media/route_finder.png": "/react-web/static/media/route_finder.285f7c03f0c47975b2c7.png",
@@ -31,12 +21,12 @@
     "static/media/django-svgrepo-com.svg": "/react-web/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/react-web/index.html",
     "static/media/css-3-svgrepo-com.svg": "/react-web/static/media/css-3-svgrepo-com.315b8fdb9dbf75ae965b80bf368895cd.svg",
-    "main.bc4dbc44.css.map": "/react-web/static/css/main.bc4dbc44.css.map",
-    "main.1c167be4.js.map": "/react-web/static/js/main.1c167be4.js.map",
+    "main.ee51fc05.css.map": "/react-web/static/css/main.ee51fc05.css.map",
+    "main.048eb358.js.map": "/react-web/static/js/main.048eb358.js.map",
     "453.ed3810f9.chunk.js.map": "/react-web/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc4dbc44.css",
-    "static/js/main.1c167be4.js"
+    "static/css/main.ee51fc05.css",
+    "static/js/main.048eb358.js"
   ]
 }
