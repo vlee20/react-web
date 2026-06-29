@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-web/static/css/main.53af92ad.css",
-    "main.js": "/react-web/static/js/main.e397b7eb.js",
+    "main.css": "/react-web/static/css/main.bc4dbc44.css",
+    "main.js": "/react-web/static/js/main.1c167be4.js",
     "static/js/453.ed3810f9.chunk.js": "/react-web/static/js/453.ed3810f9.chunk.js",
     "static/media/R0001097.JPG": "/react-web/static/media/R0001097.c735d9871161f287c9b0.JPG",
     "static/media/R0000961.JPG": "/react-web/static/media/R0000961.4a6f599091ab53540d0d.JPG",
@@ -31,12 +31,12 @@
     "static/media/django-svgrepo-com.svg": "/react-web/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/react-web/index.html",
     "static/media/css-3-svgrepo-com.svg": "/react-web/static/media/css-3-svgrepo-com.315b8fdb9dbf75ae965b80bf368895cd.svg",
-    "main.53af92ad.css.map": "/react-web/static/css/main.53af92ad.css.map",
-    "main.e397b7eb.js.map": "/react-web/static/js/main.e397b7eb.js.map",
+    "main.bc4dbc44.css.map": "/react-web/static/css/main.bc4dbc44.css.map",
+    "main.1c167be4.js.map": "/react-web/static/js/main.1c167be4.js.map",
     "453.ed3810f9.chunk.js.map": "/react-web/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.53af92ad.css",
-    "static/js/main.e397b7eb.js"
+    "static/css/main.bc4dbc44.css",
+    "static/js/main.1c167be4.js"
   ]
 }
