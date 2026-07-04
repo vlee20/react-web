@@ -44,6 +44,16 @@ export default function Contact() {
               github.com/vlee20
             </a>
           </p>
+          <p>
+            <strong>Resume:</strong>{" "}
+            <a
+              href={process.env.PUBLIC_URL + "/resume.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download PDF
+            </a>
+          </p>
         </div>
         {/* Optional: Add a simple contact form below */}
         {/* <form className="contact-form">

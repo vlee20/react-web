@@ -11,6 +11,58 @@
   opacity: 1;
 }
 
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--heading);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  transition: color 0.2s ease;
+}
+
+.nav-brand:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-brand-prompt {
+  color: var(--accent);
+}
+
+.nav-brand-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: var(--accent);
+  opacity: 0.85;
+  animation: nav-blink 1.2s step-end infinite;
+}
+
+@keyframes nav-blink {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .navbar-set {
   display: flex;
   flex-direction: row !important;
@@ -18,9 +70,8 @@
   justify-content: center;
   list-style: none;
   gap: 4px;
-  max-width: var(--maxw);
-  margin: 0 auto !important;
-  padding: 12px 16px;
+  margin: 0 !important;
+  padding: 0;
 }
 
 .fade-in {
@@ -81,4 +132,15 @@
 
 .nitem.active .nav-link::after {
   transform: scaleX(1);
+}
+
+@media screen and (max-width: 760px) {
+  .nav-inner {
+    justify-content: center;
+    padding: 10px 12px;
+  }
+  .navbar-set .nav-link {
+    padding: 7px 11px;
+    font-size: 0.88rem;
+  }
 }

@@ -4,39 +4,39 @@ import mealpickr from "../img/mealpickr.png";
 import snake from "../img/snake.png";
 import dashboard from "../img/finance-dashboard.png";
 import { motion } from "motion/react";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+const featured = {
+  title: "Overstock FPL API",
+  label: "Production System",
+  description:
+    "Scalable RESTful API built with Django REST Framework for real-time warehouse data synchronization, powering stable high-volume live order processing across teams. Directed all phases from architecture through deployment — relational SQL schema design, backend processing scripts, and management portals for shipment oversight and inventory verification.",
+  infra:
+    "Provisioned GCP Compute Engine Linux VMs end-to-end: SSL certificates, DNS configuration, and Nginx/Gunicorn tuning for production traffic.",
+  tags: ["Python", "Django REST", "MySQL", "GCP", "Nginx / Gunicorn", "Linux"],
+};
 
 const projects = [
   {
     title: "Finance Tracker Dashboard",
     description:
-      `Interactive dashboard to track and visualize monthly finances by parsing Excel files and syncing aggregated data to Firestore for cloud persistence. Built an end-to-end pipeline from Excel ingestion and data manipulation to Firebase. Handles month-based sheets and category aggregation. Responsive UI with dark mode, interactive charts, and filters for month and category selection. Leveraged Radix UI for accessibility and Vite for fast builds.`,
+      "Interactive dashboard that parses Excel files and syncs aggregated monthly finances to Firestore. Responsive UI with dark mode, interactive charts, and month/category filters — built with Radix UI for accessibility and Vite for fast builds.",
     image: dashboard,
     link: "https://github.com/vlee20/dashboard",
-    tags: [
-      "Excel parsing",
-      "Firestore",
-      "Firebase",
-      "Monthly sheets",
-      "Aggregation",
-      "Interactive charts",
-      "Filters",
-      "Radix UI",
-      "Vite",
-      "Responsive UI",
-    ],
+    tags: ["React", "Vite", "Firebase", "Radix UI", "Data Viz"],
   },
   {
     title: "RouteFinder",
     description:
-      `An iOS application for those who cannot decide where to run. Demonstrated software design models and diagrams. This program is designed to meet the needs of individuals who want to plot a route between two points, particularly for activities such as running, biking, jogging, or casual exploration. Users can set a destination and starting point, generate a path, and set random distance ranges. Built with MapKit API, all data stored locally.`,
+      "iOS app that plots running and biking routes between two points, with random distance ranges for when you can't decide where to go. Built on the MapKit API with all data stored locally.",
     image: routefinder,
     link: "https://github.com/vlee20/route_finder-master",
-    tags: ["iOS", "MapKit", "Local storage"],
+    tags: ["iOS", "MapKit", "Local Storage"],
   },
   {
     title: "MealPickr",
     description:
-      `MealPickr is a mobile Android app that helps indecisive users quickly find a place to eat by randomly selecting a nearby restaurant based on the user's location and distance range. Users can filter by meal type, dessert, open hours, or cuisine. It offers a fast, convenient way to discover dining options.`,
+      "Android app that ends the \"where do we eat\" debate by randomly picking a nearby restaurant from your location and distance range, with filters for cuisine, meal type, and open hours.",
     image: mealpickr,
     link: "https://github.com/CSUF-CPSC411-2021F/group-project-team-hypervisor",
     tags: ["Android", "Geolocation", "Filters"],
@@ -44,17 +44,83 @@ const projects = [
   {
     title: "Snake",
     description:
-      `A classic Snake game written in Python using Pygame with object-oriented design. Features graphical interface, keyboard/mouse/joystick controls, point system, tunnels, and persistent score saving. Includes a start screen and replay option.`,
+      "Classic Snake in Python and Pygame with object-oriented design — keyboard, mouse, and joystick controls, tunnels, a point system, and persistent high scores.",
     image: snake,
     link: "https://github.com/vlee20/snake_game",
-    tags: ["Python", "Pygame"],
+    tags: ["Python", "Pygame", "OOP"],
   },
+];
+
+const apiLog = [
+  { method: "POST", path: "/api/orders/sync", code: "201 Created" },
+  { method: "GET", path: "/api/inventory/verify", code: "200 OK" },
+  { method: "POST", path: "/api/alerts/duplicate-order", code: "200 OK" },
+  { method: "GET", path: "/api/shipments?status=live", code: "200 OK" },
 ];
 
 export default function Projects() {
   return (
-    <div id="Projects" className="projects-section">
-      <h1 className="projects-title">Projects</h1>
+    <section id="Projects" className="projects-section">
+      <span className="section-eyebrow">Selected Work</span>
+      <h1 className="section-heading">Projects</h1>
+      <p className="section-sub">
+        Production systems I&rsquo;ve shipped at work and things I&rsquo;ve
+        built on my own time.
+      </p>
+
+      {/* Featured production project */}
+      <motion.div
+        className="project-featured"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
+        viewport={{ once: true, margin: "-80px" }}
+      >
+        <div className="project-featured-visual" aria-hidden="true">
+          <div className="api-log">
+            <div className="api-log-bar">
+              <span className="term-dot term-dot-r" />
+              <span className="term-dot term-dot-y" />
+              <span className="term-dot term-dot-g" />
+              <span className="api-log-title">gunicorn — access.log</span>
+            </div>
+            <div className="api-log-body">
+              {apiLog.map((line, i) => (
+                <motion.p
+                  key={line.path}
+                  className="api-log-line"
+                  initial={{ opacity: 0, x: -8 }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                    transition: { duration: 0.3, delay: 0.4 + i * 0.25 },
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <span className="api-method">{line.method}</span>
+                  <span className="api-path">{line.path}</span>
+                  <span className="api-code">{line.code}</span>
+                </motion.p>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="project-featured-content">
+          <span className="project-featured-label">
+            <i className="bi bi-stars" /> {featured.label}
+          </span>
+          <h3>{featured.title}</h3>
+          <p>{featured.description}</p>
+          <p>{featured.infra}</p>
+          <div className="project-tags">
+            {featured.tags.map((tag) => (
+              <span key={tag} className="project-tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
       <div className="projects-grid">
         {projects.map((project, idx) => (
           <motion.div
@@ -64,18 +130,18 @@ export default function Projects() {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 0.6, delay: idx * 0.15 },
+              transition: { duration: 0.6, delay: idx * 0.1 },
             }}
             whileHover={{
-              scale: 1.04,
-              boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+              scale: 1.03,
+              boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
             }}
             whileTap={{ scale: 0.98 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-60px" }}
           >
-            {project.image || project.imageUrl ? (
+            {project.image ? (
               <img
-                src={project.image || project.imageUrl}
+                src={project.image}
                 alt={project.title}
                 className="project-img"
               />
@@ -101,13 +167,13 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View on GitHub
+                  <i className="bi bi-github" /> View on GitHub
                 </a>
               )}
             </div>
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

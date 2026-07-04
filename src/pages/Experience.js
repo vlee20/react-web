@@ -54,6 +54,7 @@ const timeline = [
 export default function Experience() {
   return (
     <section id="Experience" className="experience-section page-background">
+      <span className="section-eyebrow">Career Path</span>
       <h1 className="experience-title">Experience</h1>
       <p className="experience-subtitle">
         A timeline of where I&rsquo;ve built, automated, and shipped.

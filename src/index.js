@@ -11,6 +11,7 @@ import Intro from "./pages/Intro";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
+import Certifications from "./pages/Certifications";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
 
@@ -39,16 +40,17 @@ window.onscroll = function () {
 
 root.render(
   <React.Fragment>
-    <body className="page-background">
+    <div className="page-background">
       <Header />
       <Navbar />
       <Intro />
       <Experience />
       <Skills />
+      <Certifications />
       <Projects />
       <Contact />
       <Footer />
-    </body>
+    </div>
   </React.Fragment>
 );
 

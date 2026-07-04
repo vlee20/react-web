@@ -2,35 +2,22 @@ import "../styles/Navbar.css";
 import "../styles/styles.css";
 import { useEffect, useState } from "react";
 
-// var savedScrollPos = 0;
-// window.onscroll = function () {
-//   var currentScrollPos = window.scrollY;
-//   var diff = currentScrollPos - savedScrollPos;
-//   if (diff > 0) {
-//     // detects scrolling down
-//     document.getElementById("nav").classList.remove("fade-in");
-//     document.getElementById("nav").classList.add("fade-out");
-//   } else {
-//     document.getElementById("nav").classList.remove("fade-out");
-//     document.getElementById("nav").classList.add("fade-in");
-//   }
-//   savedScrollPos = currentScrollPos;
-// };
+const NAV_ITEMS = [
+  { id: "Intro", label: "Home" },
+  { id: "Experience", label: "Experience" },
+  { id: "Skills", label: "Skills" },
+  { id: "Certifications", label: "Certifications" },
+  { id: "Projects", label: "Projects" },
+  { id: "Contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [activeId, setActiveId] = useState("Intro");
 
   useEffect(() => {
-    const sectionIds = [
-      "Intro",
-      "Experience",
-      "Skills",
-      "Projects",
-      "Contact",
-    ];
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter(Boolean);
+    const sections = NAV_ITEMS.map((item) =>
+      document.getElementById(item.id)
+    ).filter(Boolean);
 
     if (sections.length === 0) return;
 
@@ -51,58 +38,29 @@ export default function Navbar() {
   }, []);
 
   return (
-    <>
-      <nav id="nav">
-        <div>
-          <ul className="navbar-set center-vertical">
-            <li className={`nitem ${activeId === "Intro" ? "active" : ""}`}>
+    <nav id="nav">
+      <div className="nav-inner">
+        <a className="nav-brand" href="#Intro">
+          <span className="nav-brand-prompt">~$</span> vincent.lee
+          <span className="nav-brand-cursor" aria-hidden="true" />
+        </a>
+        <ul className="navbar-set">
+          {NAV_ITEMS.map((item) => (
+            <li
+              key={item.id}
+              className={`nitem ${activeId === item.id ? "active" : ""}`}
+            >
               <a
                 className="nav-link"
-                href="#Intro"
-                aria-current={activeId === "Intro" ? "page" : undefined}
+                href={`#${item.id}`}
+                aria-current={activeId === item.id ? "page" : undefined}
               >
-                Home <span className="sr-only"></span>
+                {item.label}
               </a>
             </li>
-            <li className={`nitem ${activeId === "Experience" ? "active" : ""}`}>
-              <a
-                className="nav-link"
-                href="#Experience"
-                aria-current={activeId === "Experience" ? "page" : undefined}
-              >
-                Experience
-              </a>
-            </li>
-            <li className={`nitem ${activeId === "Skills" ? "active" : ""}`}>
-              <a
-                className="nav-link"
-                href="#Skills"
-                aria-current={activeId === "Skills" ? "page" : undefined}
-              >
-                Skills
-              </a>
-            </li>
-            <li className={`nitem ${activeId === "Projects" ? "active" : ""}`}>
-              <a
-                className="nav-link"
-                href="#Projects"
-                aria-current={activeId === "Projects" ? "page" : undefined}
-              >
-                Projects
-              </a>
-            </li>
-            <li className={`nitem ${activeId === "Contact" ? "active" : ""}`}>
-              <a
-                className="nav-link"
-                href="#Contact"
-                aria-current={activeId === "Contact" ? "page" : undefined}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
+          ))}
+        </ul>
+      </div>
+    </nav>
   );
 }

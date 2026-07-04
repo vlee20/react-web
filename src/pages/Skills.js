@@ -1,56 +1,112 @@
 import "../styles/styles.css";
 import "../styles/Skills.css";
-import python_icon from "../img/python-svgrepo-com.svg";
-import mysql_icon from "../img/mysql-logo-svgrepo-com.svg";
-import mongodb_icon from "../img/mongodb-svgrepo-com.svg";
-import javascript_icon from "../img/javascript-svgrepo-com.svg";
-import html_icon from "../img/html-5-svgrepo-com.svg";
-import gcp_icon from "../img/gcp-svgrepo-com.svg";
-import django_icon from "../img/django-svgrepo-com.svg";
-import css_icon from "../img/css-3-svgrepo-com.svg";
-import nginx_icon from "../img/nginx-svgrepo-com.svg";
-import cpp_icon from "../img/c-plus-plus-svgrepo-com.svg";
 import { motion } from "motion/react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-const skills = [
-  { icon: python_icon, name: "Python" },
-  { icon: mysql_icon, name: "SQL" },
-  { icon: mongodb_icon, name: "MongoDB" },
-  { icon: javascript_icon, name: "JavaScript" },
-  { icon: html_icon, name: "HTML" },
-  { icon: css_icon, name: "CSS" },
-  { icon: gcp_icon, name: "GCP" },
-  { icon: django_icon, name: "Django" },
-  { icon: nginx_icon, name: "Nginx" },
-  { icon: cpp_icon, name: "C++" },
+const skillGroups = [
+  {
+    icon: "bi-code-slash",
+    title: "Languages",
+    items: ["Python", "C++", "JavaScript", "TypeScript", "Go", "SQL", "HTML/CSS"],
+  },
+  {
+    icon: "bi-hdd-network",
+    title: "Networking",
+    badge: "CCNA in progress",
+    items: [
+      "TCP/IP",
+      "Subnetting",
+      "VLANs",
+      "Routing & Switching",
+      "OSPF",
+      "DHCP / DNS",
+      "Packet Tracer",
+    ],
+  },
+  {
+    icon: "bi-cloud-check",
+    title: "Cloud & Infrastructure",
+    items: [
+      "GCP Compute Engine",
+      "Firebase",
+      "Linux",
+      "Nginx",
+      "Gunicorn",
+      "SSL / DNS",
+    ],
+  },
+  {
+    icon: "bi-database",
+    title: "Data & APIs",
+    items: [
+      "REST APIs",
+      "Django REST Framework",
+      "ETL Pipelines",
+      "MySQL",
+      "MSSQL",
+      "MongoDB",
+      "Firestore",
+    ],
+  },
+  {
+    icon: "bi-window-stack",
+    title: "Frontend & UI",
+    items: ["React", "Radix UI", "Bootstrap", "Vite", "Responsive Design"],
+  },
+  {
+    icon: "bi-tools",
+    title: "DevOps & Tools",
+    items: [
+      "Git / GitHub",
+      "CI/CD Pipelines",
+      "Postman",
+      "Agile",
+      "Automated Scripting",
+    ],
+  },
 ];
 
 export default function Skills() {
   return (
-    <div id="Skills" className="skills-section">
-      <h1 className="skills-title">Skills</h1>
+    <section id="Skills" className="skills-section">
+      <span className="section-eyebrow">Toolbox</span>
+      <h1 className="section-heading">Skills</h1>
+      <p className="section-sub">
+        The languages, platforms, and protocols I work with &mdash; from
+        application code down to the network layer.
+      </p>
       <div className="skills-grid">
-        {skills.map((skill, idx) => (
+        {skillGroups.map((group, idx) => (
           <motion.div
-            className="skill-card"
-            key={skill.name}
-            initial={{ opacity: 0, y: 40 }}
+            className={`skill-group ${group.badge ? "skill-group-featured" : ""}`}
+            key={group.title}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 0.5, delay: idx * 0.1 },
+              transition: { duration: 0.5, delay: idx * 0.08 },
             }}
-            whileHover={{
-              scale: 1.08,
-              boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
-            }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-60px" }}
           >
-            <img src={skill.icon} alt={skill.name} className="skill-icon" />
-            <div className="skill-label">{skill.name}</div>
+            <div className="skill-group-head">
+              <span className="skill-group-icon">
+                <i className={`bi ${group.icon}`} />
+              </span>
+              <h3 className="skill-group-title">{group.title}</h3>
+              {group.badge && (
+                <span className="skill-group-badge">{group.badge}</span>
+              )}
+            </div>
+            <div className="skill-pills">
+              {group.items.map((item) => (
+                <span key={item} className="skill-pill">
+                  {item}
+                </span>
+              ))}
+            </div>
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -24,7 +24,10 @@ export default function Footer() {
           <i className="bi bi-github fs-3"></i>
         </a>
       </div>
-      <div className="center-horizontal">Created by Vincent Lee © 2025</div>
+      <div className="center-horizontal">Created by Vincent Lee © 2026</div>
+      <div className="center-horizontal footer-tagline">
+        Built with React &middot; Deployed on GitHub Pages
+      </div>
     </footer>
   );
 }
