@@ -13,7 +13,7 @@ const chips = [
 
 const roles = [
   "Software Engineer",
-  "Cloud & Automation Developer",
+  "IT Support Specialist",
   "CCNA Candidate",
 ];
 
@@ -77,11 +77,11 @@ export default function Intro() {
             <RotatingRole words={roles} />
           </p>
           <p className="hero-bio">
-            I build cloud-integrated REST APIs, ETL pipelines, and automation
-            tooling that run in production &mdash; from Django services on GCP
-            to interactive dashboards. I&rsquo;m currently strengthening my
-            infrastructure roots by studying for the Cisco CCNA, labbing
-            routing, switching, and subnetting in my free time.
+            I bridge software engineering and IT operations &mdash; building
+            Python automation, cloud-integrated systems, and ETL pipelines,
+            while diagnosing hardware, network, and software issues for
+            real end users. I&rsquo;m currently pursuing the Cisco CCNA to
+            deepen my networking expertise.
           </p>
           <div className="hero-actions">
             <a href="#Projects" className="btn btn-primary">
@@ -124,7 +124,7 @@ export default function Intro() {
             </span>
             <span className="hero-focus-sep" aria-hidden="true" />
             <span className="hero-focus-item">
-              <i className="bi bi-cloud-check" /> Cloud &amp; Infrastructure
+              <i className="bi bi-headset" /> IT &amp; End-User Support
             </span>
             <span className="hero-focus-sep" aria-hidden="true" />
             <span className="hero-focus-item">

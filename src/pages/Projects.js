@@ -10,20 +10,20 @@ const featured = {
   title: "Overstock FPL API",
   label: "Production System",
   description:
-    "Scalable RESTful API built with Django REST Framework for real-time warehouse data synchronization, powering stable high-volume live order processing across teams. Directed all phases from architecture through deployment — relational SQL schema design, backend processing scripts, and management portals for shipment oversight and inventory verification.",
+    "Deployed and maintained a production server environment on GCP Linux VMs for a high-volume order and inventory system — full end-to-end ownership of network configuration, SSL certificates, DNS records, and web server setup.",
   infra:
-    "Provisioned GCP Compute Engine Linux VMs end-to-end: SSL certificates, DNS configuration, and Nginx/Gunicorn tuning for production traffic.",
-  tags: ["Python", "Django REST", "MySQL", "GCP", "Nginx / Gunicorn", "Linux"],
+    "Designed relational SQL schemas and backend validation scripts, then authored the architecture overviews, API references, and SOPs the team still runs on.",
+  tags: ["Python", "Django", "MySQL", "GCP", "Nginx", "Linux"],
 };
 
 const projects = [
   {
     title: "Finance Tracker Dashboard",
     description:
-      "Interactive dashboard that parses Excel files and syncs aggregated monthly finances to Firestore. Responsive UI with dark mode, interactive charts, and month/category filters — built with Radix UI for accessibility and Vite for fast builds.",
+      "Full-stack interactive dashboard that parses, stores, and visualizes financial data with cloud persistence — an intuitive, accessible UI with dynamic filters and a responsive layout across devices.",
     image: dashboard,
     link: "https://github.com/vlee20/dashboard",
-    tags: ["React", "Vite", "Firebase", "Radix UI", "Data Viz"],
+    tags: ["React", "Vite", "Firebase", "Tailwind CSS", "Radix UI"],
   },
   {
     title: "RouteFinder",

@@ -5,48 +5,42 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 const skillGroups = [
   {
-    icon: "bi-code-slash",
-    title: "Languages",
-    items: ["Python", "C++", "JavaScript", "TypeScript", "Go", "SQL", "HTML/CSS"],
+    icon: "bi-headset",
+    title: "IT Support",
+    items: [
+      "Hardware Troubleshooting",
+      "OS Configuration (Win/Linux)",
+      "Networking",
+      "Device Setup",
+      "End-User Support",
+    ],
   },
   {
     icon: "bi-hdd-network",
     title: "Networking",
     badge: "CCNA in progress",
-    items: [
-      "TCP/IP",
-      "Subnetting",
-      "VLANs",
-      "Routing & Switching",
-      "OSPF",
-      "DHCP / DNS",
-      "Packet Tracer",
-    ],
+    items: ["DNS", "SSL/TLS", "TCP/IP", "Server Configuration", "Nginx"],
+  },
+  {
+    icon: "bi-code-slash",
+    title: "Programming",
+    items: ["Python", "JavaScript", "SQL", "HTML/CSS", "C++", "Go"],
   },
   {
     icon: "bi-cloud-check",
-    title: "Cloud & Infrastructure",
+    title: "Systems & Cloud",
     items: [
+      "Linux (Ubuntu)",
       "GCP Compute Engine",
       "Firebase",
-      "Linux",
-      "Nginx",
-      "Gunicorn",
-      "SSL / DNS",
+      "CI/CD Pipelines",
+      "GitHub",
     ],
   },
   {
     icon: "bi-database",
-    title: "Data & APIs",
-    items: [
-      "REST APIs",
-      "Django REST Framework",
-      "ETL Pipelines",
-      "MySQL",
-      "MSSQL",
-      "MongoDB",
-      "Firestore",
-    ],
+    title: "Databases",
+    items: ["MySQL", "MSSQL", "MongoDB", "Firestore"],
   },
   {
     icon: "bi-window-stack",
@@ -55,13 +49,12 @@ const skillGroups = [
   },
   {
     icon: "bi-tools",
-    title: "DevOps & Tools",
+    title: "Productivity & Tools",
     items: [
-      "Git / GitHub",
-      "CI/CD Pipelines",
+      "Microsoft Office 365",
+      "Google Workspace",
+      "Visual Studio Code",
       "Postman",
-      "Agile",
-      "Automated Scripting",
     ],
   },
 ];
